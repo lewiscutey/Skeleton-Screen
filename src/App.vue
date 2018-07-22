@@ -152,4 +152,15 @@ export default {
     left: 300px;
     top: 88px;
 }
+
+h2 {
+  height: 30px;
+  line-height: 30px;
+  margin: 0;
+}
+p {
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+}
 </style>

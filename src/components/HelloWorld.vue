@@ -1,16 +1,17 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <div v-for="user in users" class="items" v-if="loading">
+    <div v-for="user in users" class="items" v-if="loading" :key="user">
       <user-item :name="user.name" :email="user.email"></user-item>
     </div>
-    <div v-for="load in loades" v-if="!loading">
+    <div v-for="load in loades" v-if="!loading" :key="load">
       <loading-item></loading-item>
     </div>
   </div>
 </template>
 
 <script>
+/* eslint-disable */
 export default {
   name: 'HelloWorld',
   data() {
@@ -55,5 +56,9 @@ li {
 a {
   color: #42b983;
 }
-
+.items {
+  width: 500px;
+  height: 50px;
+  margin: 20px auto;
+}
 </style>
